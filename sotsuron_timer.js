@@ -71,7 +71,7 @@ function dateCounter() {
         $hours.val(_h).change();
         $days.val(daysBetween).change();
 
-        tweetText = `卒業論文提出まで残り${daysBetween}日${_h}時間${m}分（多分）`;
+        tweetText = `卒業論文まで残り${daysBetween}日${_h}時間${m}分（多分）`;
         if(graduateYear - initialGraduateYear > 0)
             tweetText += `（${graduateYear - initialGraduateYear}回時間を増やしました！）`;
     }else{
