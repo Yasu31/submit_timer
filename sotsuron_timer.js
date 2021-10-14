@@ -1,6 +1,6 @@
-const initialGraduateYear = 2020;
+const initialGraduateYear = 2022;
 let graduateYear = initialGraduateYear;
-let anyDate = new Date(`${graduateYear}/1/31 12:00:00`);
+let anyDate = new Date(`${graduateYear}/1/21 17:00:00`);
 let tweetText = "";
 let forceRefresh = false;
 let manualDarkMode = null;
@@ -13,7 +13,7 @@ const refreshTweetText = text => {
 };
 
 const ryuunen = () => {
-    anyDate = new Date(`${++graduateYear}/1/31 12:00:00`);
+    anyDate = new Date(`${++graduateYear}/1/21 17:00:00`);
     forceRefresh = true;
 }
 
@@ -71,14 +71,14 @@ function dateCounter() {
         $hours.val(_h).change();
         $days.val(daysBetween).change();
 
-        tweetText = `卒業論文提出まで残り${daysBetween}日${_h}時間${m}分（多分）`;
+        tweetText = `修士論文提出まで残り${daysBetween}日${_h}時間${m}分（多分）`;
         if(graduateYear - initialGraduateYear > 0)
             tweetText += `（${graduateYear - initialGraduateYear}回時間を増やしました！）`;
     }else{
         alert("時間です！");
         clearInterval(timer);
         element.textContent = "残り0日と0時間0分0秒";
-        tweetText = "卒業論文提出締め切りを過ぎました";
+        tweetText = "修士論文提出締め切りを過ぎました";
     }
     if(forceRefresh || Math.abs(ms % 60000) <= 1000) refreshTweetText(tweetText); // every 1 minute
     forceRefresh = false;
