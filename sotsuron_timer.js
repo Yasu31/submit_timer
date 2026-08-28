@@ -1,6 +1,6 @@
-const initialGraduateYear = 2022;
+const initialGraduateYear = 2026;
 let graduateYear = initialGraduateYear;
-let anyDate = new Date(`${graduateYear}/1/21 17:00:00`);
+let anyDate = new Date(`${graduateYear}/12/10 17:00:00`);
 let tweetText = "";
 let forceRefresh = false;
 let manualDarkMode = null;
@@ -13,7 +13,7 @@ const refreshTweetText = text => {
 };
 
 const ryuunen = () => {
-    anyDate = new Date(`${++graduateYear}/1/21 17:00:00`);
+    anyDate = new Date(`${++graduateYear}/12/10 17:00:00`);
     forceRefresh = true;
 }
 
